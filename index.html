@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
     <title>Rating Component | Frontend Mentor</title>
 
     <!-- FONTS -->
@@ -13,29 +14,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
     <!-- STYLES -->
     <link rel="stylesheet" href="./app/styles/styles.css" />
-    <script defer src="./dist/script.js"></script>
 </head>
 
 <body>
     <main class="overview">
         <div class="card">
-            <div class="star">
-                <img src="./assets/icon-star.svg" alt="Icono de estrella" class="star-icon" />
+            <div class="card-st1" id="st1">
+                <div class="star">
+                    <img src="./assets/icon-star.svg" alt="Icono de estrella" class="star-icon" />
+                </div>
+                <h1 class="card-title">How did we do?</h1>
+                <p class="card-desc">
+                    Please let us know how we did with your support request. All feedback
+                    is appreciated to help us improve our offering!
+                </p>
+                <div class="rating-scale">
+                   <div class="rating-btn">1</div>  
+                   <div class="rating-btn">2</div>
+                   <div class="rating-btn">3</div>
+                   <div class="rating-btn">4</div>
+                   <div class="rating-btn">5</div>
+                </div>
+                <div class="submit-btn" id="sbmt_btn">SUBMIT</div>
             </div>
-            <h1 class="card-title">How did we do?</h1>
-            <p class="card-desc">
-                Please let us know how we did with your support request. All feedback
-                is appreciated to help us improve our offering!
-            </p>
-            <div class="rating-scale">
-               <div class="rating-btn">1</div>  
-               <div class="rating-btn">2</div>
-               <div class="rating-btn active">3</div>
-               <div class="rating-btn">4</div>
-               <div class="rating-btn">5</div>
+            <div class="card-st2 hide" id="st2">
+                <img src="./assets/illustration-thank-you.svg" alt="Telefono con ticket">
+                <div class="usr-score">
+                    You selected<span style="white-space: pre;" id ="score_value"></span>out of 5
+                </div>
+                <h1>Thank you!</h1>
+                <p>We aprecciate you taking the time to give a rating. If you ever need more
+                    support, don't hesitate to get in touch!
+                </p>
             </div>
-            <div class="submit-btn">SUBMIT</div>
         </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="https://github.com/RicAlc">Ricardo Alcalá</a>.
+          </div>
     </main>
+    <script src="./app/js/script.js"></script>
 </body>
 </html>
